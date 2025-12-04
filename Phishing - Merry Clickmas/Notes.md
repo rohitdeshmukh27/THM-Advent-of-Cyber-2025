@@ -1,43 +1,51 @@
 # 🎄 TryHackMe – Merry Clickmas: Phishing
 
-### **Structured Notes (MD Format)**
-
 ---
 
 ## **Task 1 — Introduction**
 
 ### **📝 The Story**
 
-* TBFC (The Best Festival Company) has recently faced multiple cybersecurity threats.
-* Local red team begins penetration tests to evaluate employee awareness regarding phishing.
-* Authorized phishing exercises help assess whether training is effective.
-* You join the red team with:
+- TBFC (The Best Festival Company) has recently faced multiple cybersecurity threats.
+- Local red team begins penetration tests to evaluate employee awareness regarding phishing.
+- Authorized phishing exercises help assess whether training is effective.
+- You join the red team with:
 
-  * Recon McRed
-  * Exploit McRed
-  * Pivot McRed
-* Objective: Plan and execute a phishing campaign against TBFC employees.
+  - Recon McRed
+  - Exploit McRed
+  - Pivot McRed
+
+- Objective: Plan and execute a phishing campaign against TBFC employees.
 
 ---
 
 ### **🎯 Learning Objectives**
 
-* Understand social engineering.
-* Learn different types of phishing.
-* Explore how red teams build fake login pages.
-* Use SET (Social-Engineer Toolkit) for sending phishing emails.
+- Understand social engineering.
+- Learn different types of phishing.
+- Explore how red teams build fake login pages.
+- Use SET (Social-Engineer Toolkit) for sending phishing emails.
 
 ---
 
 ### **🖥️ Connecting to the Machine**
 
-* Start **AttackBox**.
-* Start **Target Machine** (wait ~2 minutes).
-* Use split view if needed.
-* Both machines are required:
+Here just Click the Start Machine to start a machine with split screen
 
-  * AttackBox → Send phishing email & host phishing page
-  * Target VM → Victim environment
+- Do I need to start the AttackBox today? - No
+- Do I need to start a VM today? - Yes
+- Is there a split screen available? - Yes
+- Is there a direct link available? - No
+- Am I given credentials to connect directly to the VM via RDP, VNC, or SSH? - Yes
+
+Credentials
+
+Only needed if you are using your own THM VPN connected machine.
+
+Username: mcskidy
+Password: AoC2025!
+IP address: MACHINE_IP
+Connection via: SSH (ssh mcskidy@MACHINE_IP)
 
 ---
 
@@ -47,17 +55,18 @@
 
 ## **1. Social Engineering**
 
-* Manipulation technique targeting human psychology.
-* Goal: Make people perform actions such as:
+- Manipulation technique targeting human psychology.
+- Goal: Make people perform actions such as:
 
-  * Sharing passwords
-  * Opening malicious attachments
-  * Approving payments
-* Psychological triggers:
+  - Sharing passwords
+  - Opening malicious attachments
+  - Approving payments
 
-  * **Urgency**
-  * **Curiosity**
-  * **Authority**
+- Psychological triggers:
+
+  - **Urgency**
+  - **Curiosity**
+  - **Authority**
 
 > Social engineering = “Human hacking”.
 
@@ -65,23 +74,23 @@
 
 ## **2. Phishing**
 
-* Subset of social engineering using messages/communication.
-* Channels:
+- Subset of social engineering using messages/communication.
+- Channels:
 
-  * Email
-  * SMS → Smishing
-  * Voice calls → Vishing
-  * QR codes → Quishing
-  * Social media DMs
+  - Email
+  - SMS → Smishing
+  - Voice calls → Vishing
+  - QR codes → Quishing
+  - Social media DMs
 
 ### **Purpose**
 
 Convince victims to:
 
-* Click a malicious link
-* Download/open an attachment
-* Submit credentials
-* Send money
+- Click a malicious link
+- Download/open an attachment
+- Submit credentials
+- Send money
 
 ---
 
@@ -107,12 +116,13 @@ Ask yourself:
 
 ## **3. Building the Trap (Fake Login Page)**
 
-* The phishing campaign aims to steal login credentials.
-* Strategy:
+- The phishing campaign aims to steal login credentials.
+- Strategy:
 
-  * Host a **fake TBFC login portal**.
-  * Capture credentials via a Python script.
-* Script location on AttackBox:
+  - Host a **fake TBFC login portal**.
+  - Capture credentials via a Python script.
+
+- Script location on AttackBox:
   `~/Rooms/AoC2025/Day02`
 
 ### **Run the phishing server**
@@ -128,11 +138,11 @@ cd ~/Rooms/AoC2025/Day02
 Starting server on http://0.0.0.0:8000
 ```
 
-* **0.0.0.0** → listening on all interfaces
-* Victim will access:
+- **0.0.0.0** → listening on all interfaces
+- Victim will access:
 
-  * `http://CONNECTION_IP:8000`
-  * or `http://127.0.0.1:8000`
+  - `http://CONNECTION_IP:8000`
+  - or `http://127.0.0.1:8000`
 
 ---
 
@@ -198,8 +208,8 @@ SET then sends the phishing email.
 
 ## **5. Capturing Credentials**
 
-* Monitor the terminal running `server.py`.
-* When the victim enters credentials, they appear in real-time.
+- Monitor the terminal running `server.py`.
+- When the victim enters credentials, they appear in real-time.
 
 ---
 
@@ -225,6 +235,6 @@ Red team successfully receives **working credentials**, proving TBFC employees f
 
 If you enjoyed this room, TryHackMe recommends the **Phishing Prevention** room.
 
-*No further answers required.*
+_No further answers required._
 
 ---
