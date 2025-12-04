@@ -122,7 +122,6 @@ Suspicious scripts usually contain:
   - `cat .bash_history`
 
 ---
-
 # Objectives
 
 Which CLI command would you use to list a directory?
@@ -130,7 +129,69 @@ Which CLI command would you use to list a directory?
 <details>
   <summary>Click to reveal the answer</summary>
 
-**The answer:**
+**The answer:**  
 ls
 
 </details>
+
+---
+
+Question: What flag did you see inside of McSkidy’s guide?
+
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**The answer:**  
+THM{learning-linux-cli}
+
+</details>
+
+---
+
+Question: Which command helped you filter the logs for failed logins?
+
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**The answer:**  
+grep
+
+</details>
+
+---
+
+Question: What flag did you see inside the Eggstrike script?
+
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**The answer:**  
+THM{sir-carrotbane-attacks}
+
+</details>
+
+---
+
+Question: Which command would you run to switch to the root user?
+
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**The answer:**  
+sudo su
+
+</details>
+
+---
+
+Question: Finally, what flag did Sir Carrotbane leave in the root bash history?
+
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**The answer:**  
+THM{until-we-meet-again}
+
+</details>
+
+---
