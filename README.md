@@ -30,20 +30,24 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 - **AI-Assisted Security**: Using AI for faster detection, investigation support, OSINT, and attack surface mapping
 - **Web Application Security**: IDOR vulnerabilities and authorization flaws
 - **Malware Analysis**: Static vs dynamic analysis, sandbox usage, and using tools like PeStudio, Regshot, and ProcMon
+- **Network Discovery** : Identifying open ports, hidden services, and banners using Nmap; interacting with services via FTP, Netcat, DNS, and enumerating host-level ports.
+- **Prompt Injection** : Exploiting agentic AI by leaking CoT reasoning, listing internal tools, extracting hidden tokens, and executing restricted functions.
 
 ---
 
 ## 📊 Progress Tracker
 
-| Day | Challenge                        | Status      |
-| --- | -------------------------------- | ----------- |
-| 0   | Advent of Cyber Prep Track       | ✅ Complete |
-| 1   | Linux CLI - Shells Bells         | ✅ Complete |
-| 2   | Phishing - Merry Clickmas        | ✅ Complete |
-| 3   | Splunk Basics - Did you SIEM?    | ✅ Complete |
-| 4   | AI in Security - old sAInt nick  | ✅ Complete |
-| 5   | IDOR - Santa's Little IDOR       | ✅ Complete |
-| 6   | Malware Analysis - Egg-xecutable | ✅ Complete |
+| Day | Challenge                              | Status      |
+| --- | -------------------------------------- | ----------- |
+| 0   | Advent of Cyber Prep Track             | ✅ Complete |
+| 1   | Linux CLI - Shells Bells               | ✅ Complete |
+| 2   | Phishing - Merry Clickmas              | ✅ Complete |
+| 3   | Splunk Basics - Did you SIEM?          | ✅ Complete |
+| 4   | AI in Security - old sAInt nick        | ✅ Complete |
+| 5   | IDOR - Santa's Little IDOR             | ✅ Complete |
+| 6   | Malware Analysis - Egg-xecutable       | ✅ Complete |
+| 7   | Network Discovery - Scan-ta Clause     | ✅ Complete |
+| 8   | Prompt Injection - Sched-yule conflict | ✅ Complete |
 
 ---
 
@@ -59,4 +63,4 @@ Feel free to reach out if you spot any errors or have ideas for improvement!
 
 Happy hunting & Merry SOC-mas! 🎅🛡️
 
-_Last Updated: December 7, 2025 | Days 0-6 Complete_
+_Last Updated: December 9, 2025 | Days 0-8 Complete_
