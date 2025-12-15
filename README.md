@@ -16,6 +16,13 @@ This repository contains comprehensive documentation for the TryHackMe Advent of
 - **Day 4**: AI in Security - old sAInt nick — Leveraging AI for cybersecurity tasks (blue team & red team)
 - **Day 5**: IDOR - Santa's Little IDOR — Insecure Direct Object Reference vulnerabilities and web application security
 - **Day 6**: Malware Analysis - Egg-xecutable — Static and dynamic malware analysis using sandboxes (PeStudio, Regshot, ProcMon)
+- **Day 7**: Network Discovery - Scan-ta Clause — Network scanning with Nmap, service enumeration, and port discovery
+- **Day 8**: Prompt Injection - Sched-yule conflict — Exploiting AI systems through prompt injection and chain-of-thought reasoning
+- **Day 9**: Passwords - A Cracking Christmas — Password cracking techniques for encrypted files (PDFs and ZIPs) using dictionary and mask attacks
+- **Day 10**: SOC Alert Triaging - Tinsel Triage — Alert prioritization, investigation workflow, and using Microsoft Sentinel for security operations
+- **Day 11**: XSS - Merry XSSMas — Cross-Site Scripting vulnerabilities, reflected and stored XSS exploitation and prevention
+- **Day 12**: Phishing - Phishmas Greetings — Advanced phishing detection, impersonation, typosquatting, punycode attacks, and email analysis
+- **Day 13**: YARA Rules - YARA mean one! — YARA rule creation for pattern-based malware detection and threat hunting
 
 Each day includes detailed notes, commands, methodology, and practical examples.
 
@@ -30,8 +37,13 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 - **AI-Assisted Security**: Using AI for faster detection, investigation support, OSINT, and attack surface mapping
 - **Web Application Security**: IDOR vulnerabilities and authorization flaws
 - **Malware Analysis**: Static vs dynamic analysis, sandbox usage, and using tools like PeStudio, Regshot, and ProcMon
-- **Network Discovery** : Identifying open ports, hidden services, and banners using Nmap; interacting with services via FTP, Netcat, DNS, and enumerating host-level ports.
-- **Prompt Injection** : Exploiting agentic AI by leaking CoT reasoning, listing internal tools, extracting hidden tokens, and executing restricted functions.
+- **Network Discovery**: Identifying open ports, hidden services, and banners using Nmap; interacting with services via FTP, Netcat, DNS, and enumerating host-level ports
+- **Prompt Injection**: Exploiting agentic AI by leaking CoT reasoning, listing internal tools, extracting hidden tokens, and executing restricted functions
+- **Password Cracking**: Dictionary and mask-based attacks on encrypted files (PDFs, ZIPs) using pdfcrack, fcrackzip, and john the ripper
+- **SOC Operations**: Alert triage methodology, prioritization based on severity/impact, incident investigation workflow, and MITRE ATT&CK mapping
+- **Cross-Site Scripting (XSS)**: Understanding reflected vs stored XSS, exploitation techniques, cookie theft, and XSS prevention (input sanitization, HttpOnly flags)
+- **Advanced Phishing Detection**: Email header analysis, impersonation detection, typosquatting, punycode abuse, and distinguishing spam from malicious phishing
+- **YARA Rules**: Pattern-based detection using YARA, creating rules with text/hex/regex strings, threat hunting across files and memory
 
 ---
 
@@ -48,6 +60,11 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 | 6   | Malware Analysis - Egg-xecutable       | ✅ Complete |
 | 7   | Network Discovery - Scan-ta Clause     | ✅ Complete |
 | 8   | Prompt Injection - Sched-yule conflict | ✅ Complete |
+| 9   | Passwords - A Cracking Christmas       | ✅ Complete |
+| 10  | SOC Alert Triaging - Tinsel Triage     | ✅ Complete |
+| 11  | XSS - Merry XSSMas                     | ✅ Complete |
+| 12  | Phishing - Phishmas Greetings          | ✅ Complete |
+| 13  | YARA Rules - YARA mean one!            | ✅ Complete |
 
 ---
 
@@ -63,4 +80,4 @@ Feel free to reach out if you spot any errors or have ideas for improvement!
 
 Happy hunting & Merry SOC-mas! 🎅🛡️
 
-_Last Updated: December 9, 2025 | Days 0-8 Complete_
+_Last Updated: December 15, 2025 | Days 0-13 Complete_
