@@ -23,6 +23,8 @@ This repository contains comprehensive documentation for the TryHackMe Advent of
 - **Day 11**: XSS - Merry XSSMas — Cross-Site Scripting vulnerabilities, reflected and stored XSS exploitation and prevention
 - **Day 12**: Phishing - Phishmas Greetings — Advanced phishing detection, impersonation, typosquatting, punycode attacks, and email analysis
 - **Day 13**: YARA Rules - YARA mean one! — YARA rule creation for pattern-based malware detection and threat hunting
+- **Day 14**: Containers - DoorDasher's Demise — Docker container security, container escape techniques, and privilege escalation via Docker sockets
+- **Day 15**: Web Attack Forensics - Drone Alone — Web attack detection, Apache log analysis, Base64 payload decoding, and correlating web logs with Sysmon
 
 Each day includes detailed notes, commands, methodology, and practical examples.
 
@@ -44,6 +46,8 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 - **Cross-Site Scripting (XSS)**: Understanding reflected vs stored XSS, exploitation techniques, cookie theft, and XSS prevention (input sanitization, HttpOnly flags)
 - **Advanced Phishing Detection**: Email header analysis, impersonation detection, typosquatting, punycode abuse, and distinguishing spam from malicious phishing
 - **YARA Rules**: Pattern-based detection using YARA, creating rules with text/hex/regex strings, threat hunting across files and memory
+- **Container Security**: Docker architecture, container vs VM differences, Docker sockets, container escape techniques, and privilege escalation through misconfigured containers
+- **Web Attack Forensics**: Detecting command injection in Apache logs, Base64 payload decoding, correlating web and host telemetry using Splunk, and reconstructing attack chains
 
 ---
 
@@ -65,6 +69,8 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 | 11  | XSS - Merry XSSMas                     | ✅ Complete |
 | 12  | Phishing - Phishmas Greetings          | ✅ Complete |
 | 13  | YARA Rules - YARA mean one!            | ✅ Complete |
+| 14  | Containers - DoorDasher's Demise       | ✅ Complete |
+| 15  | Web Attack Forensics - Drone Alone     | ✅ Complete |
 
 ---
 
@@ -80,4 +86,4 @@ Feel free to reach out if you spot any errors or have ideas for improvement!
 
 Happy hunting & Merry SOC-mas! 🎅🛡️
 
-_Last Updated: December 15, 2025 | Days 0-13 Complete_
+_Last Updated: December 16, 2025 | Days 0-15 Complete_
