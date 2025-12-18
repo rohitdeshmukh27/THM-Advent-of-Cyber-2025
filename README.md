@@ -25,6 +25,8 @@ This repository contains comprehensive documentation for the TryHackMe Advent of
 - **Day 13**: YARA Rules - YARA mean one! — YARA rule creation for pattern-based malware detection and threat hunting
 - **Day 14**: Containers - DoorDasher's Demise — Docker container security, container escape techniques, and privilege escalation via Docker sockets
 - **Day 15**: Web Attack Forensics - Drone Alone — Web attack detection, Apache log analysis, Base64 payload decoding, and correlating web logs with Sysmon
+- **Day 16**: Forensics - Registry Furensics — Windows Registry forensics, registry hive analysis, and artifact examination
+- **Day 17**: CyberChef - Hoperation Save McSkidy — Data encoding/decoding, CyberChef operations, multi-stage decoding (Base64, XOR, MD5, ROT13, ROT47, Hex)
 
 Each day includes detailed notes, commands, methodology, and practical examples.
 
@@ -48,6 +50,8 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 - **YARA Rules**: Pattern-based detection using YARA, creating rules with text/hex/regex strings, threat hunting across files and memory
 - **Container Security**: Docker architecture, container vs VM differences, Docker sockets, container escape techniques, and privilege escalation through misconfigured containers
 - **Web Attack Forensics**: Detecting command injection in Apache logs, Base64 payload decoding, correlating web and host telemetry using Splunk, and reconstructing attack chains
+- **Registry Forensics**: Windows Registry structure, forensic artifact analysis, and investigating system and user activity through registry hives
+- **Data Encoding/Decoding**: Encoding vs encryption differences, CyberChef operations, chaining recipes, multi-stage decoding (Base64, XOR with keys, MD5 hash cracking, ROT13/ROT47, hexadecimal), and HTTP header analysis
 
 ---
 
@@ -71,6 +75,8 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 | 13  | YARA Rules - YARA mean one!            | ✅ Complete |
 | 14  | Containers - DoorDasher's Demise       | ✅ Complete |
 | 15  | Web Attack Forensics - Drone Alone     | ✅ Complete |
+| 16  | Forensics - Registry Furensics         | ✅ Complete |
+| 17  | CyberChef - Hoperation Save McSkidy    | ✅ Complete |
 
 ---
 
@@ -86,4 +92,4 @@ Feel free to reach out if you spot any errors or have ideas for improvement!
 
 Happy hunting & Merry SOC-mas! 🎅🛡️
 
-_Last Updated: December 16, 2025 | Days 0-15 Complete_
+_Last Updated: December 19, 2025 | Days 0-17 Complete_
