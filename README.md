@@ -27,6 +27,7 @@ This repository contains comprehensive documentation for the TryHackMe Advent of
 - **Day 15**: Web Attack Forensics - Drone Alone — Web attack detection, Apache log analysis, Base64 payload decoding, and correlating web logs with Sysmon
 - **Day 16**: Forensics - Registry Furensics — Windows Registry forensics, registry hive analysis, and artifact examination
 - **Day 17**: CyberChef - Hoperation Save McSkidy — Data encoding/decoding, CyberChef operations, multi-stage decoding (Base64, XOR, MD5, ROT13, ROT47, Hex)
+- **Day 18**: Obfuscation - The Egg Shell File — Code obfuscation techniques, ROT1/ROT13 ciphers, XOR encryption, Base64 encoding, layered obfuscation, and deobfuscation with CyberChef
 
 Each day includes detailed notes, commands, methodology, and practical examples.
 
@@ -52,6 +53,7 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 - **Web Attack Forensics**: Detecting command injection in Apache logs, Base64 payload decoding, correlating web and host telemetry using Splunk, and reconstructing attack chains
 - **Registry Forensics**: Windows Registry structure, forensic artifact analysis, and investigating system and user activity through registry hives
 - **Data Encoding/Decoding**: Encoding vs encryption differences, CyberChef operations, chaining recipes, multi-stage decoding (Base64, XOR with keys, MD5 hash cracking, ROT13/ROT47, hexadecimal), and HTTP header analysis
+- **Code Obfuscation**: Understanding obfuscation vs encoding vs encryption, identifying obfuscation patterns (ROT1/ROT13, Base64, XOR), detecting visual clues in obfuscated code, reversing layered obfuscation (multi-stage decoding), and using CyberChef Magic operation for automatic deobfuscation
 
 ---
 
@@ -77,6 +79,7 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 | 15  | Web Attack Forensics - Drone Alone     | ✅ Complete |
 | 16  | Forensics - Registry Furensics         | ✅ Complete |
 | 17  | CyberChef - Hoperation Save McSkidy    | ✅ Complete |
+| 18  | Obfuscation - The Egg Shell File       | ✅ Complete |
 
 ---
 
@@ -92,4 +95,4 @@ Feel free to reach out if you spot any errors or have ideas for improvement!
 
 Happy hunting & Merry SOC-mas! 🎅🛡️
 
-_Last Updated: December 19, 2025 | Days 0-17 Complete_
+_Last Updated: December 20, 2025 | Days 0-18 Complete_
