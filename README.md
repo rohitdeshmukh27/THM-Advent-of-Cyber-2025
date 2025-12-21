@@ -28,6 +28,8 @@ This repository contains comprehensive documentation for the TryHackMe Advent of
 - **Day 16**: Forensics - Registry Furensics — Windows Registry forensics, registry hive analysis, and artifact examination
 - **Day 17**: CyberChef - Hoperation Save McSkidy — Data encoding/decoding, CyberChef operations, multi-stage decoding (Base64, XOR, MD5, ROT13, ROT47, Hex)
 - **Day 18**: Obfuscation - The Egg Shell File — Code obfuscation techniques, ROT1/ROT13 ciphers, XOR encryption, Base64 encoding, layered obfuscation, and deobfuscation with CyberChef
+- **Day 19**: ICS - Modbus - Claus for Concern — Industrial Control Systems (ICS), SCADA systems, PLCs, Modbus protocol, compromising industrial systems, and safe remediation techniques
+- **Day 20**: Race Conditions - Toy to The World — Race condition vulnerabilities, TOCTOU attacks, shared resource exploitation, parallel request attacks using Burp Suite, and mitigation strategies
 
 Each day includes detailed notes, commands, methodology, and practical examples.
 
@@ -54,6 +56,8 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 - **Registry Forensics**: Windows Registry structure, forensic artifact analysis, and investigating system and user activity through registry hives
 - **Data Encoding/Decoding**: Encoding vs encryption differences, CyberChef operations, chaining recipes, multi-stage decoding (Base64, XOR with keys, MD5 hash cracking, ROT13/ROT47, hexadecimal), and HTTP header analysis
 - **Code Obfuscation**: Understanding obfuscation vs encoding vs encryption, identifying obfuscation patterns (ROT1/ROT13, Base64, XOR), detecting visual clues in obfuscated code, reversing layered obfuscation (multi-stage decoding), and using CyberChef Magic operation for automatic deobfuscation
+- **Industrial Control Systems (ICS)**: SCADA system components (sensors, actuators, PLCs, historians), Modbus TCP protocol fundamentals, ICS vulnerabilities, exploiting unauthenticated Modbus access, reading/writing holding registers and coils using Python and pymodbus, identifying trap mechanisms in compromised systems, and safe remediation procedures
+- **Race Conditions**: Understanding race condition vulnerabilities (TOCTOU, shared resources, atomicity violations), exploiting timing bugs through parallel requests, using Burp Suite Repeater for parallel request attacks, manipulating stock/transaction values, and implementing mitigation strategies (atomic transactions, idempotency keys, rate limiting)
 
 ---
 
@@ -80,6 +84,8 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 | 16  | Forensics - Registry Furensics         | ✅ Complete |
 | 17  | CyberChef - Hoperation Save McSkidy    | ✅ Complete |
 | 18  | Obfuscation - The Egg Shell File       | ✅ Complete |
+| 19  | ICS - Modbus - Claus for Concern       | ✅ Complete |
+| 20  | Race Conditions - Toy to The World     | ✅ Complete |
 
 ---
 
@@ -95,4 +101,4 @@ Feel free to reach out if you spot any errors or have ideas for improvement!
 
 Happy hunting & Merry SOC-mas! 🎅🛡️
 
-_Last Updated: December 20, 2025 | Days 0-18 Complete_
+_Last Updated: December 22, 2025 | Days 0-20 Complete_
