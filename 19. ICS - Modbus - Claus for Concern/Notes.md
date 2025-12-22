@@ -1,8 +1,8 @@
-# 🎄 TryHackMe – ICS - Modbus: Claus for Concern
+# **ICS - Modbus – Claus for Concern**
 
-# Task 1: Introduction
+# **Task 1 – Introduction**
 
-## 📖 The Story
+## **The Story**
 
 The snow falls heavily over Wareville as chaos erupts at TBFC headquarters. What should be the busiest shipping day of the season has turned into a disaster.
 
@@ -17,7 +17,7 @@ The logistics manager pulls up a delivery manifest. "Look at this", she says, po
 Then, on one of the monitoring screens, a message flashes for just a second before disappearing:
 
 ```
-🐰 EGGSPLOIT v6.66 - Property of HopSec Island 🐰
+EGGSPLOIT v6.66 - Property of HopSec Island
 "Why should Christmas have all the fun?" - King Malhare
 ```
 
@@ -25,11 +25,11 @@ Someone has compromised the drone fleet's control systems. The attack is sophist
 
 **Your mission:** Investigate the TBFC Drone Delivery System, uncover how King Malhare's Eggsploit team has compromised it, and restore Christmas deliveries before SOC-mas is ruined.
 
-⚠️ **Warning:** King Malhare doesn't leave systems undefended. Traps are waiting for the careless investigator. One wrong move and you might make things much worse.
+**Warning:** King Malhare doesn't leave systems undefended. Traps are waiting for the careless investigator. One wrong move and you might make things much worse.
 
 ---
 
-## 🔍 A Mysterious Discovery
+## **A Mysterious Discovery**
 
 As you walk through the warehouse control room, something catches your eye—a crumpled piece of paper on the floor near the PLC terminal. It looks like someone dropped it in a hurry.
 
@@ -74,7 +74,7 @@ C14: Christmas Restored Flag
 C15: Self-Destruct Status
      (Auto-armed on breach)
 
-⚠️ CRITICAL: Never change HR0 while C11=True!
+CRITICAL: Never change HR0 while C11=True!
 Will trigger countdown!
 
 - Maintenance Tech, Dec 19
@@ -90,7 +90,7 @@ Little do you know, this crumpled note will be exactly what saves Christmas...
 
 ---
 
-## 🎯 Learning Objectives
+## **Learning Objectives**
 
 - Understand how **SCADA** (Supervisory Control and Data Acquisition) systems monitor industrial processes
 - Learn what **PLCs** (Programmable Logic Controllers) do in automation
@@ -101,9 +101,9 @@ Little do you know, this crumpled note will be exactly what saves Christmas...
 
 ---
 
-# Task 2: SCADA Systems
+# **Task 2 – SCADA Systems**
 
-## 🔧 What is SCADA?
+## **What is SCADA?**
 
 **SCADA systems** are the "command centres" of industrial operations. They act as the bridge between human operators and the machines doing the work. Think of SCADA as the nervous system of a factory—it senses what's happening, processes that information, and sends commands to make things happen.
 
@@ -111,11 +111,11 @@ TBFC uses a SCADA system to oversee its entire drone delivery operation. Without
 
 ---
 
-## 📦 Components of a SCADA System
+## **Components of a SCADA System**
 
 A SCADA system typically consists of four key components:
 
-### 1. Sensors & Actuators
+### **1. Sensors & Actuators**
 
 These are the **eyes and hands** of the system.
 
@@ -124,7 +124,7 @@ These are the **eyes and hands** of the system.
 
 **Example:** In TBFC's warehouse, sensors detect when a package is placed on the conveyor belt, and actuators control the robotic arms that load drones.
 
-### 2. PLCs (Programmable Logic Controllers)
+### **2. PLCs (Programmable Logic Controllers)**
 
 These are the **brains** that execute automation logic.
 
@@ -134,7 +134,7 @@ These are the **brains** that execute automation logic.
 
 **Example:** A PLC might decide: "If the package weight matches a chocolate egg AND the destination is Zone 5, load it onto Drone 7."
 
-### 3. Monitoring Systems
+### **3. Monitoring Systems**
 
 Visual interfaces where operators observe physical processes:
 
@@ -144,7 +144,7 @@ Visual interfaces where operators observe physical processes:
 
 **Example:** TBFC's warehouse has security cameras on **port 80** that show real-time footage of the packaging floor.
 
-### 4. Historians
+### **4. Historians**
 
 Databases that store operational data for later analysis:
 
@@ -156,7 +156,7 @@ Databases that store operational data for later analysis:
 
 ---
 
-## 🚁 SCADA in the Drone Delivery System
+## **SCADA in the Drone Delivery System**
 
 TBFC's compromised SCADA system manages several critical functions:
 
@@ -171,11 +171,11 @@ TBFC's compromised SCADA system manages several critical functions:
 
 ---
 
-## 🎯 Why SCADA Systems Are Targeted
+## **Why SCADA Systems Are Targeted**
 
 Industrial control systems like SCADA have become increasingly attractive targets for cybercriminals and nation-state actors:
 
-### Vulnerabilities
+### **Vulnerabilities**
 
 1. **Legacy Software** — Many SCADA systems were installed decades ago and never updated
 2. **Default Credentials** — Commonly left unchanged ("if it works, don't touch it" mentality)
@@ -184,7 +184,7 @@ Industrial control systems like SCADA have become increasingly attractive target
 5. **Connected to Corporate Networks** — Most are not truly "air-gapped"
 6. **Protocols Lack Authentication** — Modbus and similar protocols were designed for trusted environments
 
-### Real-World Impact
+### **Real-World Impact**
 
 - In early **2024**, the first ICS/OT malware, **FrostyGoop**, was discovered
 - Can directly interface with industrial control systems via **Modbus TCP protocol**
@@ -194,7 +194,7 @@ Industrial control systems like SCADA have become increasingly attractive target
 
 ---
 
-## ❓ Questions
+## **Questions**
 
 **What port is commonly used by Modbus TCP?**
 
@@ -204,13 +204,13 @@ Industrial control systems like SCADA have become increasingly attractive target
 
 ---
 
-# Task 3: PLC & Modbus Protocol
+# **Task 3 – PLC & Modbus Protocol**
 
-## 🤖 What is a PLC?
+## **What is a PLC?**
 
 A **PLC** (Programmable Logic Controller) is an industrial computer designed to control machinery and processes in real-world environments. Unlike your laptop or smartphone, PLCs are purpose-built machines engineered for extreme reliability and harsh conditions.
 
-### PLCs are designed to:
+### **PLCs are designed to:**
 
 | Feature                                       | Description                                                                                  |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -223,7 +223,7 @@ A **PLC** (Programmable Logic Controller) is an industrial computer designed to 
 
 ---
 
-## 📡 What is Modbus?
+## **What is Modbus?**
 
 **Modbus** is the communication protocol that industrial devices use to talk to each other.
 
@@ -231,7 +231,7 @@ A **PLC** (Programmable Logic Controller) is an industrial computer designed to 
 - One of the oldest and most widely deployed industrial protocols in the world
 - Succeeded because it's **simple**, **reliable**, and works with almost any device
 
-### How Modbus Works
+### **How Modbus Works**
 
 Think of Modbus as a basic request-response conversation:
 
@@ -240,7 +240,7 @@ Client (your computer): "PLC, what's the current value of register 0?"
 Server (the PLC): "Register 0 currently holds the value 1."
 ```
 
-### The Security Problem
+### **The Security Problem**
 
 This simplicity makes Modbus easy to implement and debug, but it also means **security was never a consideration**:
 
@@ -252,7 +252,7 @@ This simplicity makes Modbus easy to implement and debug, but it also means **se
 
 ---
 
-## 📊 Modbus Data Types
+## **Modbus Data Types**
 
 Modbus organizes data into four distinct types:
 
@@ -263,16 +263,16 @@ Modbus organizes data into four distinct types:
 | **Holding Registers** | Analog outputs (numbers) | 0-65535 | Temperature setpoint, motor speed, zone selection |
 | **Input Registers**   | Analog inputs (numbers)  | 0-65535 | Current temperature, pressure reading, flow rate  |
 
-### ⚠️ Important Distinction
+### **Important Distinction**
 
 - **Writable:** Coils and Holding Registers (you can change their values to control the system)
 - **Read-only:** Discrete Inputs and Input Registers (they reflect sensor measurements)
 
 ---
 
-## 🎯 TBFC's Drone Control System
+## **TBFC's Drone Control System**
 
-### Holding Registers (Configuration Values)
+### **Holding Registers (Configuration Values)**
 
 | Register | Purpose                | Values                                        |
 | -------- | ---------------------- | --------------------------------------------- |
@@ -280,7 +280,7 @@ Modbus organizes data into four distinct types:
 | **HR1**  | Delivery zone          | 1-9 for normal zones, 10 for ocean dump       |
 | **HR4**  | System signature       | Version identifier or attacker's calling card |
 
-### Coils (System Behavior Flags)
+### **Coils (System Behavior Flags)**
 
 | Coil    | Purpose                      | Values                               |
 | ------- | ---------------------------- | ------------------------------------ |
@@ -291,17 +291,17 @@ Modbus organizes data into four distinct types:
 | **C14** | Christmas restoration status | Auto-set when system is correct      |
 | **C15** | Self-destruct mechanism      | Auto-armed/disarmed                  |
 
-> 💡 **Remember that crumpled note you found earlier?** Now it makes complete sense. The maintenance technician was documenting these exact Modbus addresses and their meanings!
+**Note:** Remember that crumpled note you found earlier? Now it makes complete sense. The maintenance technician was documenting these exact Modbus addresses and their meanings!
 
 ---
 
-## 🔢 Modbus Addressing
+## **Modbus Addressing**
 
 Each data point in Modbus has a **unique address**—think of it like a house number on a street.
 
-⚠️ **Critical detail:** Modbus addresses start at **0**, not 1. This zero-indexing catches many beginners off guard.
+**Critical detail:** Modbus addresses start at **0**, not 1. This zero-indexing catches many beginners off guard.
 
-### Examples from TBFC System
+### **Examples from TBFC System**
 
 ```
 Holding Register 0 (HR0) = Package type selector
@@ -314,15 +314,15 @@ Coil 15 (C15) = Self-destruct status
 
 ---
 
-## 🌐 Modbus TCP vs Serial Modbus
+## **Modbus TCP vs Serial Modbus**
 
-### Original: Serial Modbus
+### **Original: Serial Modbus**
 
 - Operated over serial connections using RS-232 or RS-485 cables
 - Devices were physically connected in a network
 - Physical isolation provided some security (needed physical access)
 
-### Modern: Modbus TCP
+### **Modern: Modbus TCP**
 
 - Encapsulates Modbus protocol inside standard TCP/IP network packets
 - Modbus TCP servers listen on **port 502** by default
@@ -333,7 +333,7 @@ Coil 15 (C15) = Self-destruct status
 
 ---
 
-## 🔒 The Security Problem
+## **The Security Problem**
 
 Modbus has **no built-in security mechanisms:**
 
@@ -352,7 +352,7 @@ Modbus has **no built-in security mechanisms:**
 
 ---
 
-## 🔗 Connecting the Dots
+## **Connecting the Dots**
 
 Now you understand why the OpenPLC web interface showed nothing useful. **King Malhare bypassed it entirely.**
 
@@ -364,13 +364,13 @@ In the next task, we'll use **Python** and the **pymodbus library** to investiga
 
 ---
 
-# Task 4: Practical — Hack It Back!
+# **Task 4 – Practical – Hack It Back!**
 
-## 🔍 Initial Reconnaissance
+## **Initial Reconnaissance**
 
 As with any incident response scenario, we begin with reconnaissance. Let's discover what services are running on the target system.
 
-### Nmap Scan
+### **Nmap Scan**
 
 From the AttackBox terminal, run an Nmap scan:
 
@@ -387,9 +387,9 @@ PORT     STATE SERVICE VERSION
 502/tcp  open  modbus  Modbus TCP
 ```
 
-> **Note:** We specified ports 22, 80, 502 to speed up the scan. For a comprehensive scan of all ports, use: `nmap -sV -T4 -p- -vv MACHINE_IP` (this will take several minutes).
+**Note:** We specified ports 22, 80, 502 to speed up the scan. For a comprehensive scan of all ports, use: `nmap -sV -T4 -p- -vv MACHINE_IP` (this will take several minutes).
 
-### Key Findings
+### **Key Findings**
 
 - **Port 80** — HTTP service (the CCTV camera feed)
 - **Port 502** — Modbus TCP (the PLC communication protocol)
@@ -398,13 +398,13 @@ This is typical of an industrial control system setup: a web interface for monit
 
 ---
 
-## 📹 Visual Confirmation: The CCTV Feed
+## **Visual Confirmation: The CCTV Feed**
 
 Before diving into technical details, let's see what's physically happening in the warehouse.
 
 **Navigate to:** `http://MACHINE_IP` in your browser
 
-### What You'll See
+### **What You'll See**
 
 Through the security camera, you can see the warehouse floor in real-time:
 
@@ -418,17 +418,17 @@ Through the security camera, you can see the warehouse floor in real-time:
 
 This visual confirmation tells you the problem is **real and active**. The system isn't broken—it's working perfectly, just delivering the wrong items. This is a classic sign of a **logic manipulation attack** rather than a system failure.
 
-> 💡 **Keep this CCTV feed open in a separate tab.** It will update as you make changes to the system, providing real-time feedback on your remediation efforts.
+**Note:** Keep this CCTV feed open in a separate tab. It will update as you make changes to the system, providing real-time feedback on your remediation efforts.
 
 ---
 
-## 🐍 Modbus Reconnaissance with Python
+## **Modbus Reconnaissance with Python**
 
 We'll interrogate the Modbus server directly using Python and the **pymodbus** library.
 
-> **Remember that crumpled note you found earlier?** Pull it out now. The terminology that seemed foreign—HR0, C11, "Modbus"—is about to make perfect sense.
+**Note:** Remember that crumpled note you found earlier? Pull it out now. The terminology that seemed foreign—HR0, C11, "Modbus"—is about to make perfect sense.
 
-### Step 1: Install PyModbus
+### **Step 1: Install PyModbus**
 
 On the AttackBox, it's already pre-installed. If using your own machine:
 
@@ -438,7 +438,7 @@ pip3 install pymodbus==3.6.8
 
 ---
 
-### Step 2: Establish Connection
+### **Step 2: Establish Connection**
 
 Open a Python interpreter:
 
@@ -467,15 +467,15 @@ else:
 Connected to PLC successfully
 ```
 
-✅ **Excellent!** We have a connection to the PLC's Modbus interface. Notice how **no authentication was required**—this is a critical security weakness in the Modbus protocol.
+**Excellent!** We have a connection to the PLC's Modbus interface. Notice how **no authentication was required**—this is a critical security weakness in the Modbus protocol.
 
 ---
 
-### Step 3: Reading Holding Registers
+### **Step 3: Reading Holding Registers**
 
 Holding registers store numeric configuration values. According to the note, **HR0** controls package type selection.
 
-#### Read HR0 (Package Type)
+#### **Read HR0 (Package Type)**
 
 ```python
 # Read holding register 0 (Package Type)
@@ -499,11 +499,11 @@ HR0 (Package Type): 1
   Chocolate Eggs
 ```
 
-🔍 **There it is!** HR0 is set to **1**, which means the system is configured to load chocolate eggs. The note was right—this is exactly what's causing the problem.
+**There it is!** HR0 is set to **1**, which means the system is configured to load chocolate eggs. The note was right—this is exactly what's causing the problem.
 
 ---
 
-#### Read HR1 (Delivery Zone)
+#### **Read HR1 (Delivery Zone)**
 
 ```python
 # Read holding register 1 (Delivery Zone)
@@ -529,7 +529,7 @@ Zone 5 is normal—good news.
 
 ---
 
-#### Read HR4 (System Signature)
+#### **Read HR4 (System Signature)**
 
 ```python
 # Read holding register 4 (System Signature)
@@ -553,11 +553,11 @@ The value **666** confirms this system has been compromised by the Eggsploit fra
 
 ---
 
-### Step 4: Reading Coils
+### **Step 4: Reading Coils**
 
 Coils are boolean flags that control system behavior. The note mentioned several critical coils.
 
-#### Read C10 (Inventory Verification)
+#### **Read C10 (Inventory Verification)**
 
 ```python
 # Read coil 10 (Inventory Verification)
@@ -581,7 +581,7 @@ Inventory verification is disabled. The system is blindly following commands wit
 
 ---
 
-#### Read C11 (Protection/Override)
+#### **Read C11 (Protection/Override)**
 
 ```python
 # Read coil 11 (Protection/Override)
@@ -601,13 +601,13 @@ C11 (Protection/Override): True
   ACTIVE - Changes are being monitored
 ```
 
-⚠️ **This is crucial!** C11 is enabled, which means the system is actively monitoring for changes.
+**This is crucial!** C11 is enabled, which means the system is actively monitoring for changes.
 
 **Remember the warning on the note:** "Never change HR0 while C11=True! Will trigger countdown!"
 
 ---
 
-#### Read C15 (Self-Destruct Status)
+#### **Read C15 (Self-Destruct Status)**
 
 ```python
 # Read coil 15 (Self-Destruct Status)
@@ -627,11 +627,11 @@ C15 (Self-Destruct Armed): False
   Not armed yet - safe for now
 ```
 
-✅ **Good news** — the self-destruct isn't armed yet. But it will be if we try to change HR0 while C11 is active. This is the trap mechanism.
+**Good news** — the self-destruct isn't armed yet. But it will be if we try to change HR0 while C11 is active. This is the trap mechanism.
 
 ---
 
-### Step 5: Understanding the Trap
+### **Step 5: Understanding the Trap**
 
 Now the note makes complete sense. The maintenance technician discovered:
 
@@ -765,21 +765,21 @@ Now we have a **complete picture of the compromise**. Time to restore the system
 
 ---
 
-## 🛠️ Safe Remediation
+## **Safe Remediation**
 
 Based on our reconnaissance, we need to:
 
-1. ✅ Disable protection mechanism (**C11**) FIRST
-2. ✅ Change package type to Christmas gifts (**HR0 = 0**)
-3. ✅ Enable inventory verification (**C10 = True**)
-4. ✅ Enable audit logging (**C13 = True**)
-5. ✅ Verify **C15** never got armed
+1. Disable protection mechanism (**C11**) FIRST
+2. Change package type to Christmas gifts (**HR0 = 0**)
+3. Enable inventory verification (**C10 = True**)
+4. Enable audit logging (**C13 = True**)
+5. Verify **C15** never got armed
 
-⚠️ **The order is critical.** If we change HR0 before disabling C11, the trap triggers.
+**The order is critical.** If we change HR0 before disabling C11, the trap triggers.
 
 ---
 
-### Create the Remediation Script
+### **Create the Remediation Script**
 
 ```bash
 nano restore_christmas.py
@@ -958,11 +958,11 @@ Flag: THM{eGgMas0V3r}
 Disconnected from PLC
 ```
 
-🎉 **Excellent work!** Now check the CCTV feed at `http://MACHINE_IP`—you should see King Malhare's defeat displayed.
+**Excellent work!** Now check the CCTV feed at `http://MACHINE_IP`—you should see King Malhare's defeat displayed.
 
 ---
 
-## ⚠️ What If You Triggered the Trap?
+## **What If You Triggered the Trap?**
 
 If you had tried to change HR0 **before** disabling C11, here's what would have happened:
 
@@ -978,7 +978,7 @@ This demonstrates why understanding industrial control systems before making cha
 
 ---
 
-## 🔍 Post-Incident Analysis
+## **Post-Incident Analysis**
 
 **King Malhare's attack was sophisticated because it:**
 
@@ -1000,7 +1000,7 @@ The maintenance technician who left the note likely discovered the compromise bu
 
 ---
 
-## ❓ Questions
+## **Questions**
 
 **What's the flag?**
 
