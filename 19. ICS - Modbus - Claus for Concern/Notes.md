@@ -196,11 +196,14 @@ Industrial control systems like SCADA have become increasingly attractive target
 
 ## **Questions**
 
-**What port is commonly used by Modbus TCP?**
+### **What port is commonly used by Modbus TCP?**
 
-```
-502
-```
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**502**
+
+</details>
 
 ---
 
@@ -1002,10 +1005,13 @@ The maintenance technician who left the note likely discovered the compromise bu
 
 ## **Questions**
 
-**What's the flag?**
+### **What's the flag?**
 
-```
-THM{eGgMas0V3r}
-```
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**THM{eGgMas0V3r}**
+
+</details>
 
 ---

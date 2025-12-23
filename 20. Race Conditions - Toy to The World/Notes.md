@@ -411,16 +411,22 @@ This ensures that even if the same request is sent 15 times, only the first one 
 
 ## ❓ Questions
 
-**What is the flag value once the stocks are negative for SleighToy Limited Edition?**
+### **What is the flag value once the stocks are negative for SleighToy Limited Edition?**
 
-```
-THM{WINNER_OF_R@CE007}
-```
+<details>
+  <summary>Click to reveal the answer</summary>
 
-**Repeat the same steps as were done for ordering the SleighToy Limited Edition. What is the flag value once the stocks are negative for Bunny Plush (Blue)?**
+**THM{WINNER_OF_R@CE007}**
 
-```
-THM{WINNER_OF_Bunny_R@ce}
-```
+</details>
+
+### **Repeat the same steps as were done for ordering the SleighToy Limited Edition. What is the flag value once the stocks are negative for Bunny Plush (Blue)?**
+
+<details>
+  <summary>Click to reveal the answer</summary>
+
+**THM{WINNER_OF_Bunny_R@ce}**
+
+</details>
 
 ---
