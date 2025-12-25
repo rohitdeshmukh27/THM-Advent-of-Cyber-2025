@@ -30,6 +30,9 @@ This repository contains comprehensive documentation for the TryHackMe Advent of
 - **Day 18**: Obfuscation - The Egg Shell File — Code obfuscation techniques, ROT1/ROT13 ciphers, XOR encryption, Base64 encoding, layered obfuscation, and deobfuscation with CyberChef
 - **Day 19**: ICS - Modbus - Claus for Concern — Industrial Control Systems (ICS), SCADA systems, PLCs, Modbus protocol, compromising industrial systems, and safe remediation techniques
 - **Day 20**: Race Conditions - Toy to The World — Race condition vulnerabilities, TOCTOU attacks, shared resource exploitation, parallel request attacks using Burp Suite, and mitigation strategies
+- **Day 22**: C2 Detection - Command & Carol — Command and Control detection using RITA (Real Intelligence Threat Analytics), analyzing network traffic with Zeek logs, beacon detection, DNS tunneling identification, threat modifiers, and threat hunting
+- **Day 23**: AWS Security - S3cret Santa — AWS IAM fundamentals, user/group/role management, policy enumeration, assuming roles with AWS STS, S3 bucket access, and cloud credential exploitation
+- **Day 24**: Exploitation with cURL - Hoperation Eggsploit — HTTP protocol fundamentals, using cURL for web exploitation, sending GET/POST requests, cookie and session management, brute-force automation, and bypassing user-agent filters
 
 Each day includes detailed notes, commands, methodology, and practical examples.
 
@@ -58,6 +61,9 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 - **Code Obfuscation**: Understanding obfuscation vs encoding vs encryption, identifying obfuscation patterns (ROT1/ROT13, Base64, XOR), detecting visual clues in obfuscated code, reversing layered obfuscation (multi-stage decoding), and using CyberChef Magic operation for automatic deobfuscation
 - **Industrial Control Systems (ICS)**: SCADA system components (sensors, actuators, PLCs, historians), Modbus TCP protocol fundamentals, ICS vulnerabilities, exploiting unauthenticated Modbus access, reading/writing holding registers and coils using Python and pymodbus, identifying trap mechanisms in compromised systems, and safe remediation procedures
 - **Race Conditions**: Understanding race condition vulnerabilities (TOCTOU, shared resources, atomicity violations), exploiting timing bugs through parallel requests, using Burp Suite Repeater for parallel request attacks, manipulating stock/transaction values, and implementing mitigation strategies (atomic transactions, idempotency keys, rate limiting)
+- **C2 Detection**: Command and Control traffic detection with RITA, converting PCAPs to Zeek logs, analyzing beacon patterns, identifying DNS tunneling, understanding threat modifiers (prevalence, rare signatures, first seen, MIME type mismatches), evaluating connection metadata (duration, byte volume, port usage), and threat hunting using search filters
+- **AWS Security**: AWS IAM architecture (users, groups, roles, policies), inline vs attached policies, enumerating AWS permissions with AWS CLI, role assumption with AWS STS, temporary credential management, S3 bucket enumeration and data exfiltration, and cloud misconfigurations
+- **Web Exploitation with cURL**: HTTP request/response fundamentals, crafting GET/POST requests from command line, submitting form data with cURL, managing cookies and sessions without a browser, automating login attempts with bash loops, brute-force scripting, bypassing user-agent restrictions, and direct HTTP communication
 
 ---
 
@@ -86,6 +92,9 @@ Each day includes detailed notes, commands, methodology, and practical examples.
 | 18  | Obfuscation - The Egg Shell File       | ✅ Complete |
 | 19  | ICS - Modbus - Claus for Concern       | ✅ Complete |
 | 20  | Race Conditions - Toy to The World     | ✅ Complete |
+| 22  | C2 Detection - Command & Carol         | ✅ Complete |
+| 23  | AWS Security - S3cret Santa            | ✅ Complete |
+| 24  | Exploitation with cURL - Hoperation Eggsploit | ✅ Complete |
 
 ---
 
@@ -101,4 +110,4 @@ Feel free to reach out if you spot any errors or have ideas for improvement!
 
 Happy hunting & Merry SOC-mas! 🎅🛡️
 
-_Last Updated: December 22, 2025 | Days 0-20 Complete_
+_Last Updated: December 25, 2025 | Days 0-20, 22-24 Complete_
